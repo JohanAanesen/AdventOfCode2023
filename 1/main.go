@@ -77,16 +77,7 @@ func main() {
 
 func checkStringNumber(input string) (int, string, int, string) {
 
-	numberStrings := make([]string, 0)
-	numberStrings = append(numberStrings, "one")
-	numberStrings = append(numberStrings, "two")
-	numberStrings = append(numberStrings, "three")
-	numberStrings = append(numberStrings, "four")
-	numberStrings = append(numberStrings, "five")
-	numberStrings = append(numberStrings, "six")
-	numberStrings = append(numberStrings, "seven")
-	numberStrings = append(numberStrings, "eight")
-	numberStrings = append(numberStrings, "nine")
+	numberStrings := [9]string{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}
 
 	lowestIndex := 999
 	lowestNumber := "999999"
