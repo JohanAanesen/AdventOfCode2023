@@ -31,23 +31,16 @@ func main() {
 }
 
 func calculatePossibleWins(time int, distance int) int {
-	firstW := time - 1
-	lastW := 1
-	for i := 1; i <= firstW; i++ {
+	ways2Dub := 0
+	for i := 0; i < time; i++ {
 		dist := (time - i) * i
 		if dist > distance {
-			firstW = i
+			ways2Dub++
+
+		} else if ways2Dub > 0 {
 			break
 		}
 	}
 
-	for i := time - 1; i >= lastW; i-- {
-		dist := (time - i) * i
-		if dist > distance {
-			lastW = i
-			break
-		}
-	}
-
-	return lastW - firstW + 1
+	return ways2Dub
 }
